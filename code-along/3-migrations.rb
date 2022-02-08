@@ -3,6 +3,13 @@
 # should be the top-level directory (i.e. /workspace/your-app/) and then run:
 # rails runner code-along/3-migrations.rb
 
+#rails generate model Salesperson******
+#creates table ^(code only)
+#singular to plural
+
+#rails db:migrate*******
+#can only run once
+
 # **************************
 # Don't change or move
 Salesperson.destroy_all
@@ -25,3 +32,11 @@ Salesperson.destroy_all
 # check the schema to confirm the change
 
 # 5. insert new rows in the table
+
+puts Salesperson.all.count
+salesperson = Salesperson.new
+salesperson.first_name = "Brian"
+salesperson.last_name = "Eng"
+salesperson.email = "brian@tacos.com"
+salesperson.save
+puts Salesperson.all.count
